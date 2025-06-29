@@ -1,0 +1,348 @@
+/* Menu */
+
+.telegram-button {
+    position: fixed;
+    right: 13px;
+    bottom: 10px;
+    transform: translate(-50%, -50%);
+    background: #afddd0;; /*цвет кнопки*/
+    border-radius: 50%;
+    width: 55px; /*ширина кнопки*/
+    height: 55px; /*высота кнопки*/
+    color: #fff;
+    text-align: center;
+    line-height: 53px; /*центровка иконки в кнопке*/
+    font-size: 35px; /*размер иконки*/
+    z-index: 9999;
+}
+.telegram-button a {
+    color: #fff;
+}
+.telegram-button:before,
+.telegram-button:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    border: 50%;
+    border: 1px solid #000000; /*цвет анимированных волн от кнопки*/
+    left: -20px;
+    right: -20px;
+    top: -20px;
+    bottom: -20px;
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite;
+    opacity: 0;
+    backface-visibility: hidden; 
+}
+ 
+.telegram-button:after{
+    animation-delay: .5s;
+}
+ 
+@keyframes animate
+{
+    0%
+    {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #afddd0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.container {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1 {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    transition: 0.1s;
+    position: absolute;
+    top: 48%;
+    left: 10%;
+    border-radius: 60px;
+}
+
+.bar2 {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    transition: 0.1s;
+    position: absolute;
+    top: 52%;
+    left: 10%;
+    border-radius: 60px;
+}
+
+.bar3 {
+    width: 40px;
+    height: 4px;
+    background-color: #000;
+    transition: 0.1s;
+    position: absolute;
+    top: 56%;
+    left: 10%;
+    border-radius: 60px;
+}
+
+.search-box {
+    border: black;
+    border-width: 100px;
+    transform: translate(-50%, -50%);
+    background: #F5F5F5;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 87%;
+}
+
+.search-box:hover>.search-txt {
+    width: 100%;
+    padding: 0 6px;
+}
+
+.search-box:hover>.search-btn {
+    background: white;
+    color: black;
+}
+
+.search-btn {
+    border: black;
+    border-width: 100px;
+    color: #eeeeee;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.search-btn>i {
+    font-size: 20px;
+}
+
+.search-txt {
+    border: black;
+    border-width: 100px;
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.1s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+}
+
+/*Side checkbox*/
+#side-checkbox {
+    display: none;
+}
+
+.side-panel {
+    position: fixed;
+    z-index: 999999;
+    top: 0;
+    left: -360px;
+    background: #afddd0;
+    transition: all 0.15s;
+    width: 320px;
+    height: 100vh;
+    color: black;
+    padding: 40px 20px;
+}
+
+.side-title {
+    font-size: 20px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #BFE2FF;
+}
+
+#side-checkbox:checked+.side-panel {
+    left: 0;
+}
+
+.side-button-2 {
+    font-size: 100px;
+    border-radius: 60px;
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 10%;
+    cursor: pointer;
+    transform: rotate(45deg);
+    color: black;
+    transition: all 0.1s ease-in-out;
+}
+
+.side-button-2:hover {
+    transform: rotate(45deg) scale(1.1);
+    color: #FFF;
+}
+
+/* Font */
+.titillium-web-extralight {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.titillium-web-light {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.titillium-web-regular {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.titillium-web-semibold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.titillium-web-bold {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.titillium-web-black {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.titillium-web-extralight-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.titillium-web-light-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.titillium-web-regular-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.titillium-web-semibold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.titillium-web-bold-italic {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.homepage_menu {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 33%;
+    left: 10%;
+}
+
+.account_menu {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+}
+
+.products_menu {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 47%;
+    left: 10%;
+}
+
+.about_us_menu {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 54%;
+    left: 10%;
+}
+
+.contacts_menu {
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 61%;
+    left: 10%;
+}
+
+.image-with-text {
+  display: flex;
+  align-items: center; 
+  position: absolute; 
+  left: 20%;
+}
+
+.image-with-text p { 
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    font-style: italic; 
+}
+
+.image-with-text img {
+  margin-left: 20%; /* adjust as needed */
+}
