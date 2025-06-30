@@ -1,12 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
-<html >
+<html>
 <head>
   <meta charset="UTF-8">
   <title>Sign In/Up Form Transitions</title>
   
   
   
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="{% static 'css/account.css'%}">
 
   
 </head>
@@ -16,7 +17,7 @@
   <body> 
 <form> 
     <center> 
-        <img src="logo.png" width="100" height="100" style="margin-bottom: 10px;">
+        <img src="{% static 'img/logo.png' %}" width="100" height="100" style="margin-bottom: 10px;">
     </center>
   <input checked="" id="signin" name="action" type="radio" value="signin">
   <label for="signin">Вход</label>
@@ -40,7 +41,7 @@
     </span>
   </button>
 </form>
-<a id="hint" href="file:///home/amir/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B/python_project/IBUY/site/main_page/site.html">Вернуться на главную страницу</a>
+<a id="hint" href="http://127.0.0.1:8000/">Вернуться на главную страницу</a>
 
 <script type="text/javascript">
     
