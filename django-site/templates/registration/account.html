@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sign In/Up Form Transitions</title>
+  <link rel="stylesheet" href="{% static 'css/account.css'%}">
+</head>
+
+<body>
+  <form method="post"> 
+    <center> 
+        <img src="{% static 'img/logo.png' %}" width="100" height="100" style="margin-bottom: 10px;">
+    </center>
+    <input checked="" id="signin" name="action" type="radio" value="signin">
+      <label for="signin">Вход</label>
+      <input id="signup" name="action" type="radio" value="signup">
+      <label for="signup">Регистрация</label>
+      <div id="wrapper">
+        <div id="arrow"></div>
+          {% csrf_token %}
+          <input id="email" placeholder="Почта" type="text" name="email">
+          <input id="pass" placeholder="Пароль" type="password" name="pass">
+          <input id="repass" placeholder="Повторите пароль" type="password" name="repass">
+      </div>
+      <button type="submit">
+        <span>
+          Восстановить
+          <br>
+          Вход
+          <br>
+          Регистрация
+        </span>
+      </button>
+  </form>
+  <a id="hint" href="http://127.0.0.1:8000/">Вернуться на главную страницу</a>
+  </body>
+</html>
