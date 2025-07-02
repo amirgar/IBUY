@@ -1,1 +1,1 @@
-https://developer.mozilla.org/ru/docs/Learn_web_development/Extensions/Server-side/Django/Authentication#:~:text=%7B%25%20block%20content,%3EPlease%20login
+https://pocoz.gitbooks.io/django-v-primerah/content/glava-7-sozdanie-internet-magazina/sozdanie-proekta-internet-magazina/sozdanie-modelei-kataloga-produktov.html
